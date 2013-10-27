@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 import biauthorize as ba
 
-users = [{"email": "test", "password": "test", "biauth": "1"}]
+users = [{"email": "test", "password": "test", "biauth": "10"}]
 
 
 def checkFunction(email, password, biauth_user):
@@ -37,7 +37,7 @@ def secret_route():
     ):
         return render_template("secret.html")
     else:
-        return render_template("index.html")
+        return render_template("failed.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
